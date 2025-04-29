@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+:root{
+    --fondo:#c4c4c4;
+    --color1: #222831;
+    --color2: #393E46;
+    --button: #45AAB8;
+}
+.i_wrench{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../icons/repair.svg) no-repeat center center;
+    vertical-align: middle;
+}
+.i_users{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../icons/users.svg) no-repeat center center;
+    vertical-align: middle;
+}
+.i_history{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../icons/history.svg) no-repeat center center;
+    vertical-align: middle;
+}
+.i_configs{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../icons/configs.svg) no-repeat center center;
+    vertical-align: middle;
+}
+* {
+    user-select: none;
+    -webkit-user-drag: none;
+    margin:0; 
+    padding:0;
+    font-family: "JetBrains Mono", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: var(--fondo);
+    background-image: url(../img/background_pattern.svg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+    background-position-x: 124px;
+}
+.navbar_container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+    .navbar{
+        background-color: var(--color2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        min-width: 25vh;
+    }
+    .navbar ul{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+            .navbar li{
+                list-style: none;
+                text-decoration: none;
+                width: 100%;
+            }
+                .navbar button{
+                    background-color: var(--color2);
+                    color: rgb(170, 170, 170);
+                    border: none;
+                    border-bottom: 2px solid #000000;
+                    width: 70%;
+                    height: 50px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    cursor: pointer;
+                    transition: 1.5s ease-in-out;
+                }
+                    .navbar button:hover{
+                        border-bottom: 2px solid var(--button);
+                        color: white;
+                        transition: 0.2s ease-in-out;
+                    }
+/*---------------------------------------------------------------*/
+/*
+/*-------------------- Estilos pagina ---------------------------*/
+/*
+/*---------------------------------------------------------------*/
+.clients_windows{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+    .clients_header{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: end;
+        width: 100%;
+        height: 10%;
+    }
+
+        .clients_header_title{
+            margin: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 10px 20px;
+        }
+
+/*---------------------------------------------------------------*/
+
+.clients_body{
+    background-color: #f93e3e;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 90%;
+    height: 75%;
+}
+
+    .clients_body h3{
+        color: rgb(0, 0, 0);
+        text-shadow: white 1px 1px 3px;
+        border-bottom: 1px solid #000000;
+        text-align: start;
+        width: 80%;
+        transition: 0.8s ease-in-out;
+        margin: 20px 0px;
+    }
+
+    .clients_body table {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        background-color: #858585;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .clients_body th{
+        background-color: #00a6e7;
+        color: white;
+        border-radius: 5px;
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    .clients_body td{
+        background-color: var(--color2);
+        color: white;
+        border-radius: 5px;
+        width: auto;
+        padding: 10px 20px;
+    }
+    .clients_body button{
+        outline: 1px solid rgb(0, 0, 0);
+        color: white;
+        border: none;
+        border-radius: 3px;
+        transition: 1s ease-in-out;
+        cursor: pointer;
+    }
+
+    .clients_body button:nth-child(1){
+        background-color: rgba(252,161,48,0.5);
+        outline: 1px solid #fca130;
+    }
+
+    .clients_body button:nth-child(2){
+        background-color: rgba(249, 62, 62, 0.5);
+        outline: #f93e3e 1px solid;
+    }
+
+/*---------------------------------------------------------------*/
+
+/*---------------------------------------------------------------*/
+    .footer_clients{
+        /* background-color: #00a6e7; */
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 90%;
+        height: 10vh;
+    }
+
+    .footer_newclient_btn{
+        grid-column: 4 / 4;
+        grid-row: 2 / 4; 
+        background-color: rgb(45, 165, 61);
+        text-align: center;
+        border: #49cc90 1px solid;
+        color: white;
+        overflow-y: auto;
+        border-radius: 3px;
+        transition: 1s ease-in-out;
+        cursor: pointer;
+    }
+
+
+
+/* Modal Overlay y contenido */
+.modal_window {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#modal-toggle:checked ~ .modal_window {
+    display: flex;
+}
+
+
+.modal_body {
+    background: #c4c4c4;
+    border-radius: 10px;
+    padding: 30px;
+
+    max-width: 40%;
+    max-height: 60%;
+
+    overflow-y: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.8);
+}
+
+
+/* Formulario de reparación dentro del modal */
+
+.modal_body h3 {
+    color: rgb(0, 0, 0);
+    text-shadow: white 1px 1px 3px;
+    border-bottom: 1px solid #000000;
+    text-align: start;
+    width: 80%;
+    transition: 0.8s ease-in-out;
+    margin: 20px 0px;
+}
+.modal_form_body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 100%;
+}
+.modal_form_body label {
+    color: white;
+    text-shadow: #000000 1px 1px 2px;
+    font-size: 15px;
+    font-weight: bold;  
+    transition: 0.8s ease-in-out;
+}
+.modal_form_body input,
+.modal_form_body textarea {
+    background-color: #2d3c42;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;  
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.8s ease-in-out;
+    border: none;
+    resize: none;
+}
+
+
+.modal_form_footer_button {
+    background-color: rgb(45, 60, 66);
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    width: 30vh;
+    padding: 10px 20px;
+    margin: 30px 0px;
+    box-shadow: 2px 5px 1px #000000;
+    transition: 1s ease-in-out;
+}
+.modal_form_footer_button:last-child{
+    background-color: #9c0000;
+}
+
+.modal_form_footer_button:last-child:hover{
+    background-color: #f93e3e;
+}
+    .modal_form_footer_button:hover{
+        background-color: rgb(45, 165, 61);
+        transition: 0.2s ease-in-out;
+    }
+    .modal_form_footer_button:active{
+        box-shadow: 1px 2px 1px #000000;
+        transform: translateY(2px);
+    }

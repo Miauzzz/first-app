@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reparacion.css">
+    <title>Tecnoconce Reparaciones - Nueva reparación</title>
+</head>
+<body>
+    <main class="navbar_container">
+        <nav>
+            <ul class="navbar">
+                <a href="../index.html"><img style="padding: 0px 20px;" src="../img/logo.png" alt=""></a>
+                <li><a href="../html/reparacion.html" title="Ir a la página de inicio"><button><i class="i_wrench"></i> Reparación</button></a></li>
+                <li><a href="../html/clientes.html" title="(Ver/Añadir/Eliminar) Clientes"><button><i class="i_users"></i> Clientes</button></a></li>
+                <li><a href="../html/historial.html" title="Ver historial de reparaciones"><button><i class="i_history"></i> Historial</button></a></li>
+                <li><a href="../html/configuracion.html" title="Gestionar inventario y modelos de dispositivos"><button><i class="i_configs"></i> Configuracion</button></a></li>
+            </ul>
+        </nav>
+<div style="background-color:#45AAB8;width: 5px;height: 100vh;"></div>
+
+
+        <!-- Aqui va el contenido de la ventana -->
+<main class="reparacion_windows"> 
+    <header class="reparacion_header">
+        <button class="reparacion_header_button" id="open_selector" style="margin-left: 20px;">Seleccionar Cliente</button>
+
+        
+
+        <input type="text" id="buscadorCliente" placeholder="Buscar por Nombre/Apellido">
+        <!-- agregar el scrol a este input de arriba, style="overflow-y:auto; -->
+
+        <select id="clientSelector" size="5" multiple> 
+            <option value="nuevoCliente">Seleccionar</option>
+        </select>
+        <div class="reparacion_header_title">Nueva reparación</div>
+    </header>
+
+
+
+    
+    <section class="reparacion_body">
+        <form action="" method="POST" class="reparacion_form">
+
+            <h3>Datos de cliente</h3>
+            <article>
+                <section class="reparacion_form_body">
+                    <label for="nombre"><i class="i_name"></i> Nombre:</label>
+                    <label for="apellido"> Apellido:</label>
+                    
+                    <input type="text" id="nombre" name="nombre" placeholder="Ejemplo : Pepito" required>
+                    <input type="text" id="apellido" name="apellido" placeholder="Ejemplo : González" required>
+
+                    <label for="direccion"><i class="i_address"></i> Dirección: (Opcional)</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Ejemplo : Calle falsa #123, Comuna" style="grid-column: 1 / -1;"> 
+                    
+                    <label for="telefono"><i class="i_cel"></i> Contacto: </label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="Ejemplo : 91234567" style="grid-column: 1 / -1;" required>
+
+                    <label for="descripcion"><i class="i_description"></i> Descripcion: (Opcional)</label>
+                    <textarea id="descripcion" name="descripcion" rows="5" cols="10" placeholder="Ejemplo : Pantalla no da imagen" style="grid-column: 1 / -1;" maxlength="265"></textarea>
+                </section>
+            </article>
+
+            <h3>Reparación</h3>
+            <article class="reparacion_form_footer">
+                <label for="">Led</label>
+                <input type="checkbox" name="led" id="led" value="led">
+                <label for="">Pantalla</label>
+                <input type="checkbox" name="pantalla" id="pantalla" value="pantalla">
+                <label for="">Placa</label>
+                <input type="checkbox" name="placa" id="placa" value="placa">
+                <label for="">Garantía</label>
+                <input type="checkbox" name="garantia" id="garantia" value="garantia">
+                <label for="">Otro:</label>
+                <input type="text" name="otros" id="otros" placeholder="Ejemplo : Puerto HDMI dañado">
+            </article>
+                <button type="submit" class="reparacion_form_footer_button"> Registrar reparación</button>
+        </form>
+    </section>
+</main>
+<script src="../js/reparacion.js"></script>
+</body>
+</html>
